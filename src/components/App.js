@@ -1,6 +1,5 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import axios from 'axios';
-import logo from '../images/logo.png';
 import Search from './Search';
 import Grid from './Grid'
  
@@ -9,7 +8,7 @@ export default function App() {
      const [movies, setMovies] = React.useState([])
      const [searchQuery, setSearchQuery] = React.useState('')
      const [heading, setHeading] = React.useState('') 
-     
+     const [isClicked, setIsClicked] = React.useState(false)
 
      
     
@@ -22,6 +21,7 @@ export default function App() {
          setMovies( [...response.data.results])
          setHeading('Most Recent Movies')
          console.log('init response', response.data.results)
+         setIsClicked(false)
          })
          .catch(error => {
          console.log('error', error.response)
@@ -30,7 +30,20 @@ export default function App() {
 
 //HANDLER FUNCTIONS
 
-
+        // const handleLogoClick = (e) => {
+        //     axios
+        //         .get(
+        //         `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_MOVIE_DB_API_KEY}&language=en-US&page=1`
+        //             )
+        //             .then((response) => {
+        //             setMovies( [...response.data.results])
+        //             setHeading('Most Recent Movies')
+        //             console.log('init response', response.data.results)
+        //             })
+        //             .catch(error => {
+        //             console.log('error', error.response)
+        //         });
+        // }
 
       const handleSubmit = (e) => {
         e.preventDefault();
@@ -57,9 +70,6 @@ export default function App() {
         return (
 <div>
     <div className="header">
-        <a href='#'>
-            <img src={logo} alt="Timescale" className='logo'/>
-        </a>
         <Search handleSubmit={handleSubmit} handleChange={handleChange}/>
     </div>
     <hr/>

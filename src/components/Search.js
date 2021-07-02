@@ -1,13 +1,14 @@
 import React from "react";
-//import { withRouter } from "react-router-dom";
-//import axios from 'axios';
-
-
+import logo from '../images/logo.png';
 
 
 const Search = (props) => {
 
     return(
+      <div>
+        <a href="#" >
+          <img src={logo} alt="logo" className='logo'/>
+        </a>
         <form className="search-form" onSubmit={props.handleSubmit}
         >
         <input
@@ -18,7 +19,7 @@ const Search = (props) => {
           onChange={props.handleChange}
         />
       </form>
-      
+      </div>
     )
 }
 export default Search;
