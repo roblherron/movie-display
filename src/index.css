@@ -8,7 +8,7 @@
     bottom: -15px;
     max-width: 200px;
     display: block;
-    z-index: 8;
+    z-index: 6;
 }
 .search-form {
     position: relative;
