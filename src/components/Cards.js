@@ -26,6 +26,10 @@ const Cards = (props) => {
      
 const date = props.card.release_date
     return (
+        //create a function for arrows
+        //index cards
+        //onFunctionClick for right arrow increase index by 1
+        //onFunctionClick for left arrow decrease index by 1
         
     <div className="card">
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>

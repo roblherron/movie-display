@@ -6,6 +6,7 @@ const Modal = ({open, children, onClose}) => {
             {open === true
                 ?   <div className='modal-box'> 
                         <button onClick={onClose} className="button"> ╳ </button> {children} 
+                        <button className="arrow-left"> {'<'} </button> <button className="arrow-right"> {'>'} </button>
                     </div>
                 : null
             }
