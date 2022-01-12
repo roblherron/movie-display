@@ -138,6 +138,32 @@ hr {
 
 }
 
+.arrow-right {
+    position: absolute; 
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: gray;
+    font-size: 50px;
+    z-index: 7;
+    left: 115%;
+    top: 50%;
+    overflow: auto; 
+    background-color: rgb(36, 34, 34);
+}
+
+.arrow-left {
+    position: absolute; 
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: gray;
+    font-size: 50px;
+    z-index: 7;
+    right: 115%;
+    top: 50%;
+    overflow: auto; 
+    background-color: rgb(36, 34, 34);
+}
+
 .modal-title {
     position: absolute;
 margin-top: 3%;
