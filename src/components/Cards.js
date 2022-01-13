@@ -7,9 +7,15 @@ import Modal from './Modal'
 // for (let i = 0; i + 1; i<21) { console.log(i)}
 
 const Cards = (props) => {
+
+
+
     const [isOpen, setIsOpen] = React.useState(false)
+
     console.log(isOpen)
     console.log("props:", props)
+   
+
     function formatDate(date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -23,7 +29,8 @@ const Cards = (props) => {
     
         return [month, day, year].join('/');
     }
-        
+
+    console.log(props.index)
         //create a function for arrows
         //index cards
         //onFunctionClick for right arrow increase index by 1
@@ -33,6 +40,7 @@ const date = props.card.release_date
 
         
     <div className="card">
+        
         <Modal open={isOpen} onClose={() => setIsOpen(false)} indexDown={console.log('it begins')} indexUp={console.log('it begins')}>
             <div className="modal-backdrop">
                 <div className="modal-box">
