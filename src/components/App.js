@@ -20,7 +20,6 @@ export default function App() {
          .then((response) => {
          setMovies( [...response.data.results])
          setHeading('Most Recent Movies')
-         console.log('init response', response.data.results)
          setIsClicked(false)
          })
          .catch(error => {
@@ -54,7 +53,7 @@ export default function App() {
                 .then((response) => {
                     setMovies( [...response.data.results])
                     setHeading(`Results for '${searchQuery}'`)
-                        console.log('response', response.data.results)
+                        // console.log('response', response.data.results)
                 } )
                 .catch((error) => {
                   console.log('error', error.response)

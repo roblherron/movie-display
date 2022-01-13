@@ -142,26 +142,26 @@ hr {
     position: absolute; 
     font-family:'Courier New', Courier, monospace;
     font-weight: bolder;
-    color: gray;
+    color: rgb(214, 211, 211);
     font-size: 50px;
     z-index: 7;
     left: 115%;
     top: 50%;
     overflow: auto; 
-    background-color: rgb(36, 34, 34);
+    background-color: rgb(87, 86, 86);
 }
 
 .arrow-left {
     position: absolute; 
     font-family:'Courier New', Courier, monospace;
     font-weight: bolder;
-    color: gray;
+    color: rgb(214, 211, 211);
     font-size: 50px;
     z-index: 7;
     right: 115%;
     top: 50%;
     overflow: auto; 
-    background-color: rgb(36, 34, 34);
+    background-color: rgb(87, 86, 86);
 }
 
 .modal-title {
