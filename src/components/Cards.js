@@ -13,9 +13,11 @@ const Cards = (props) => {
     const [isOpen, setIsOpen] = React.useState(false)
 
     console.log(isOpen)
-    console.log("props:", props)
+    console.log("key", props)
    
-
+    function indexDown() {console.log("Hello there.")};
+    function indexUp() {console.log("General Kenobi")};
+    
     function formatDate(date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -41,8 +43,9 @@ const date = props.card.release_date
         
     <div className="card">
         
-        <Modal open={isOpen} onClose={() => setIsOpen(false)} indexDown={console.log('it begins')} indexUp={console.log('it begins')}>
+        <Modal open={isOpen} onClose={() => setIsOpen(false)}>
             <div className="modal-backdrop">
+            <button onClick={indexDown} className="arrow-left"> {'<'} </button> <button onClick={indexUp} className="arrow-right"> {'>'} </button>
                 <div className="modal-box">
                     <h1 className='modal-title'>{`${props.card.original_title}`}</h1>  
                     <h2 className='modal-release'>{<b>Release Date:</b>} {`${formatDate(date)}`}</h2>
