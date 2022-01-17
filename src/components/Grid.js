@@ -1,5 +1,6 @@
 import React from "react";
 import Cards from './Cards';
+import Modal from './Modal';
 
 //indexup and down needs to somehow move the card in the .map function up and down the array
 
@@ -26,12 +27,19 @@ const Grid = (props) => {
                 : props.movies.map((card) => {
                     console.log(card.index)
                 return (
-                    <Cards card={card}/>)
-            }
-            )
-            }
+                    <Cards card={card} />
+                    )}
+                )}
+            {/*   THIS MAKES MODAL INTO A CHILD OF GRID   ) &&
+                 props.movies.map((module) => { 
+                 return (
+                    <Modal module={module}/>
+                    )} )
 
+              } */}
+)
         </div>
+        
     )
     };
 export default Grid;

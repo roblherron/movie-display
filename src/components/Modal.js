@@ -8,7 +8,9 @@ const Modal = ({module, open, children, onClose, indexUp, indexDown}) => {
     function indexUp() {console.log("General Kenobi")};
     
     const date = module.release_date;
-
+//THERE IS ONE MODAL PER CARD. TO SWITCH MODALS YOU HAVE TO SWITCH CARDS.
+//THEREFORE, UP AND DOWN ARROWS NEED TO TELL GRID TO SET ISOPEN(TRUE) TO THE NEXT CARD
+//NEED TO RESTRUCTURE SO THAT MODALS ARE SIBLINGS TO CARDS INSTEAD OF CHILDREN OF CARDS
 
     function formatDate(date) {
         var d = new Date(date),

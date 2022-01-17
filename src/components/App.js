@@ -79,8 +79,6 @@ addIndex();
                 .then((response) => {
                     setMovies( [...response.data.results])
                     setHeading(`Results for '${searchQuery}'`)
-
- 
                         // console.log('response', response.data.results)
                 } )
                 .catch((error) => {
